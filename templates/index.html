@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="30" />
+    <title>TEST</title>
+</head>
+<style type="text/css">
+.zag-blue {font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+  	color:#ffffff;
+	font-weight:bold;
+	background:#333366;	 }
+</style>
+<body>
+<div align="center">
+    <p><img src="logo-lev.jpg" /></p>
+<h1>Любительский турнир по боулингу<br>
+        BOWLING OPEN<br>
+    <span style="font-size: 16px">Таблица обновляется каждые 30 сек.</span>
+</h1>
+
+<table border="1" cellspacing="1">
+    <tr align="center" class="zag-blue">
+            <th width="30">Id</th>
+            <th width="300">Игрок</th>
+            <th width="80">Игра1</th>
+            <th width="80">Игра2</th>
+            <th width="80">Игра3</th>
+            <th width="80">Игра4</th>
+            <th width="80">Гандикап</th>
+            <th width="80">Сумма</th>
+            <th width="80">Итог</th>
+        </tr>
+    {% for t in table %}
+        <tr align="center">
+            <td>{{ t.id }}</td>
+            <td>{{ t.игрок }}</td>
+            <td>{{ t.игра1 }}</td>
+            <td>{{ t.игра2 }}</td>
+            <td>{{ t.игра3 }}</td>
+            <td>{{ t.игра4 }}</td>
+            <td>{{ t.Гандикап }}</td>
+            <td>{{ t.Сумма }}</td>
+            <td>{{ t.Итог }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>

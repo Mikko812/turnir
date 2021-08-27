@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="30" />
+    <title>TEST</title>
+</head>
+<style type="text/css">
+.zag-blue {font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+  	color:#ffffff;
+	font-weight:bold;
+	background:#333366;	 }
+</style>
+<body>
+<div align="center">
+<h1>Турнир по боулингу<br>
+        Субботник в Пулково<br>
+    <span style="font-size: 16px">Таблица обновляется каждые 30 сек.</span>
+</h1>
+
+<table border="1" cellspacing="1">
+    <tr align="center" class="zag-blue">
+            <th width="30">Id</th>
+            <th width="300">Игрок</th>
+            <th width="60">Игра1</th>
+            <th width="60">Место</th>
+            <th width="60">Игра2</th>
+            <th width="60">Место</th>
+            <th width="60">Игра3</th>
+            <th width="60">Место</th>
+            <th width="60">Игра4</th>
+            <th width="60">Место</th>
+            <th width="60">Игра5</th>
+            <th width="60">Место</th>
+            <th width="60">Игра6</th>
+            <th width="60">Место</th>
+            <th width="80">Гандикап</th>
+            <th width="70">Сумма</th>
+            <th width="40">1</th>
+            <th width="40">2</th>
+            <th width="40">3</th>
+            <th width="40">4</th>
+            <th width="40">5</th>
+            <th width="40">6</th>
+            <th width="90">Выигрыш</th>
+        </tr>
+    {% for t in table %}
+        <tr align="center">
+            <td>{{ t.id }}</td>
+            <td>{{ t.игрок }}</td>
+            <td>{{ t.игра1 }}</td>
+            <td>{{ t.место1 }}</td>
+            <td>{{ t.игра2 }}</td>
+            <td>{{ t.место2 }}</td>
+            <td>{{ t.игра3 }}</td>
+            <td>{{ t.место3 }}</td>
+            <td>{{ t.игра4 }}</td>
+            <td>{{ t.место4 }}</td>
+            <td>{{ t.игра5 }}</td>
+            <td>{{ t.место5 }}</td>
+            <td>{{ t.игра6 }}</td>
+            <td>{{ t.место6 }}</td>
+            <td>{{ t.Гандикап }}</td>
+            <td>{{ t.Сумма }}</td>
+            <td>{{ t.В1 }}</td>
+            <td>{{ t.В2 }}</td>
+            <td>{{ t.В3 }}</td>
+            <td>{{ t.В4 }}</td>
+            <td>{{ t.В5 }}</td>
+            <td>{{ t.В6 }}</td>
+            <td>{{ t.Выигрыш }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>
